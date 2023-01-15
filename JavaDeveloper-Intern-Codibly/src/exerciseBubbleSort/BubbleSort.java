@@ -1,6 +1,8 @@
 package exerciseBubbleSort;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 // TODO:
 // Exercise 1: Bubble sort Create a “BubbleSort” class with one public method called “sort” 
@@ -62,6 +64,15 @@ public class BubbleSort {
 			}
 		}
 		System.out.println("Result: " + Arrays.toString(input));
+		return input;
+	}
+	// additional method for removing null values
+	protected static List<Double> sortNull(List<Double> input) {
+		   
+		if(input.contains(null)) {
+			input.removeAll(Collections.singletonList(null));
+			}
+		System.out.println("Result: " + input);
 		return input;
 	}
 	

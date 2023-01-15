@@ -2,6 +2,10 @@ package exerciseBubbleSort;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 class BubbleSortTest {
@@ -28,6 +32,12 @@ class BubbleSortTest {
 		int input3[] = {};
 		int input[] = BubbleSort.sort(input3);
 		assertArrayEquals(input3, input);
+	}
+	@Test
+	void testInput4() {
+		List<Double> input4 = new ArrayList<>(Arrays.asList(null, 5.0001));	
+		List<Double> input = BubbleSort.sortNull(input4);
+		assertEquals(input4, input);
 	}
 
 }
