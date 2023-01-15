@@ -8,6 +8,11 @@ public class BalancedWordsCounterTest {
 
 	public static void main(String[] args) {
 
+		// 1. testInput1 = “aabbabcccba” result = 28 
+		System.out.println("input=aabbabcccba  result=" + new BalancedWordsCounter().count("aabbabcccba"));
+		
+		// 2. testInput2 = “” result = 0
+		System.out.println("input=\"\"  result=" + new BalancedWordsCounter().count(""));
 	}
 
 }

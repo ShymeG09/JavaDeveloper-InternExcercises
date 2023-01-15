@@ -21,4 +21,39 @@ package exerciseBalancedWordsCounter;
 
 public class BalancedWordsCounter {
 
+	public int count(String input) {
+		
+		int counter = 0;
+		
+		for(int i = 1; i <= input.length(); i++) {
+			for(int j = 0; j <= input.length(); j++) {
+				if(input.length() >= j + i) {
+					counter += check(input.substring(j, j + i));
+				} else break;
+			}
+		}
+		return counter;
+	}
+	
+	// additional method for finding the occurance of character in input, if it's correct then return 1
+	private int check(String substring) {
+		
+		int occurCounter =- 1;
+		
+		for(int i = 0; i < substring.length(); i++) {
+			char someChar = substring.charAt(i);
+			int count = 0;
+				for(int j = 0; j < substring.length(); j++) {
+					if(substring.charAt(j) == someChar) {
+						count++;
+					}
+				}
+				if(occurCounter == -1)
+					occurCounter = count;
+				else if(occurCounter != count)
+					return 0;
+		} 
+		return 1;
+	}
+	
 }
