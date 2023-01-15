@@ -24,13 +24,18 @@ public class BalancedWordsCounter {
 	public int count(String input) {
 		
 		int counter = 0;
-		
-		for(int i = 1; i <= input.length(); i++) {
-			for(int j = 0; j <= input.length(); j++) {
-				if(input.length() >= j + i) {
-					counter += check(input.substring(j, j + i));
-				} else break;
+		// check input if it's not null
+		if(input != null) {
+			for(int i = 1; i <= input.length(); i++) {
+				for(int j = 0; j <= input.length(); j++) {
+					if(input.length() >= j + i) {
+						counter += check(input.substring(j, j + i));
+					} else break;
+				}
 			}
+		} else { 
+			// if input it's null then throw an exception
+			throw new RuntimeException(new RuntimeException("Null Pointer Exception"));
 		}
 		return counter;
 	}

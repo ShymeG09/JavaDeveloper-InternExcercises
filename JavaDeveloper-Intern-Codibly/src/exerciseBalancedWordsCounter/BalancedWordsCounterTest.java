@@ -20,6 +20,13 @@ public class BalancedWordsCounterTest {
 		} catch (Exception e) {
 			System.out.println("input=abababa1  result=" + e.getMessage());
 		}
+		
+		// 4. testInput3 = null result = RuntimeException
+		try {
+			System.out.println("input=null  result=" + (new BalancedWordsCounter().count(null)));
+		} catch (Exception e) {
+			System.out.println("input=null  result=" + e.getMessage());
+		}
 	}
 
 }
