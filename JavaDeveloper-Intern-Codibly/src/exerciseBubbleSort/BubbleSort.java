@@ -24,19 +24,24 @@ public class BubbleSort {
 		
 		int position;
 		boolean swap;
-		
-		for(int i = 0; i < input.length - 1; i++) {
-			swap = false;
-			for(int j = 0; j < input.length - i - 1; j++) {
-				if(input[j] > input [j +1]) {
-					position = input[j];
-					input[j] = input[j + 1];
-					input[j + 1] = position;
-					swap = true;
+		// check if input is null, then throw an exception
+		if(input == null) {
+			System.err.println("Result: " + RuntimeException.class);
+			throw new RuntimeException(new Exception("The input contains null value in list!"));
+		} else {
+			for(int i = 0; i < input.length - 1; i++) {
+				swap = false;
+				for(int j = 0; j < input.length - i - 1; j++) {
+					if(input[j] > input [j +1]) {
+						position = input[j];
+						input[j] = input[j + 1];
+						input[j + 1] = position;
+						swap = true;
+					}
 				}
-			}
-			if(swap == false) {
-				break;
+				if(swap == false) {
+					break;
+				}
 			}
 		}
 		System.out.println("Result: " + Arrays.toString(input));

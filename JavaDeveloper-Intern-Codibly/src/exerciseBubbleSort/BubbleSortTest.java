@@ -39,5 +39,11 @@ class BubbleSortTest {
 		List<Double> input = BubbleSort.sortNull(input4);
 		assertEquals(input4, input);
 	}
+	@Test
+	void testInput5() {
+		assertThrows(RuntimeException.class, () -> {
+			BubbleSort.sort(null);
+		});
+	}
 
 }
