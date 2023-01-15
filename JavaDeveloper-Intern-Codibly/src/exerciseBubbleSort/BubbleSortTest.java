@@ -23,5 +23,11 @@ class BubbleSortTest {
 		double input[] = BubbleSort.sortDouble(input2);
 		assertArrayEquals(input2, input);
 	}
+	@Test
+	void testInput3() {
+		int input3[] = {};
+		int input[] = BubbleSort.sort(input3);
+		assertArrayEquals(input3, input);
+	}
 
 }
