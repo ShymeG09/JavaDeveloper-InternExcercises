@@ -8,6 +8,10 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
+// Note: I didn't know if You want me to test these cases in JUnit or not,
+// so this 1st exercise (BubbleSort) is tested with JUnit to prove my skills
+// and the 2nd exercise (BalancedWordsCounter) is tested via normal-driver class
+
 class BubbleSortTest {
 	// 1. input = [1, 4, 5, 6, 8, 3, 8] result = [1, 3, 4, 5, 6, 8, 8]
 	// 2. input = [-9.3, 0.2, 4, 0.1, 5, 9] result = [-9.3, 0.1, 0.2, 4, 5, 9] 
