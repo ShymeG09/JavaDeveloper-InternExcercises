@@ -12,8 +12,10 @@ class BubbleSortTest {
 	// 5. input = null result = RuntimeException
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testInput1() {
+		int input1[] = {1, 4, 5, 6, 8, 3, 8};
+		int input[] = BubbleSort.sort(input1);
+		assertArrayEquals(input1, input);
 	}
 
 }

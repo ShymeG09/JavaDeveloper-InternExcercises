@@ -1,5 +1,7 @@
 package exerciseBubbleSort;
 
+import java.util.Arrays;
+
 // TODO:
 // Exercise 1: Bubble sort Create a “BubbleSort” class with one public method called “sort” 
 // which has to sort numbers in accordance with the “Bubble sort” algorithm. 
@@ -15,5 +17,28 @@ package exerciseBubbleSort;
 // input = null result = RuntimeException
 
 public class BubbleSort {
+	
+	public static int[] sort(int[] input) {
+		
+		int position;
+		boolean swap;
+		
+		for(int i = 0; i < input.length - 1; i++) {
+			swap = false;
+			for(int j = 0; j < input.length - i - 1; j++) {
+				if(input[j] > input [j +1]) {
+					position = input[j];
+					input[j] = input[j + 1];
+					input[j + 1] = position;
+					swap = true;
+				}
+			}
+			if(swap == false) {
+				break;
+			}
+		}
+		System.out.println("Result: " + Arrays.toString(input));
+		return input;
+	}
 
 }
