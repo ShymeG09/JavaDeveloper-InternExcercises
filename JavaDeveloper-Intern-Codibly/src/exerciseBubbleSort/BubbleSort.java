@@ -41,4 +41,28 @@ public class BubbleSort {
 		return input;
 	}
 
+	// additional method for sorting numbers (type: Double)
+	protected static double[] sortDouble(double[] input) {
+			
+		double position;
+		boolean swap;
+			
+		for(int i = 0; i < input.length - 1; i++) {
+			swap = false;
+			for(int j = 0; j < input.length - i - 1; j++) {
+				if(input[j] > input [j + 1]) {
+					position = input[j];
+					input[j] = input[j + 1];
+					input[j + 1] = position;
+					swap = true;
+				}
+			}
+			if(swap == false) {
+				break;
+			}
+		}
+		System.out.println("Result: " + Arrays.toString(input));
+		return input;
+	}
+	
 }

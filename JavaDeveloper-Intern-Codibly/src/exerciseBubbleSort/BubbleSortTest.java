@@ -17,5 +17,11 @@ class BubbleSortTest {
 		int input[] = BubbleSort.sort(input1);
 		assertArrayEquals(input1, input);
 	}
+	@Test
+	void testInput2() {
+		double input2[] = {-9.3, 0.2, 4, 0.1, 5, 9};
+		double input[] = BubbleSort.sortDouble(input2);
+		assertArrayEquals(input2, input);
+	}
 
 }
