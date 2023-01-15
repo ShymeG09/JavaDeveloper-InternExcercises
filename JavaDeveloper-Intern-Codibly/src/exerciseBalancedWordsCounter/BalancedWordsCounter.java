@@ -44,6 +44,11 @@ public class BalancedWordsCounter {
 			char someChar = substring.charAt(i);
 			int count = 0;
 				for(int j = 0; j < substring.length(); j++) {
+					// if substring countains other character than letter, throw an exception
+					if(Character.isLetter(substring.charAt(j)) == false) {
+						throw new RuntimeException(new RuntimeException(
+								"The text (input) countains other characters than letters!"));
+					}
 					if(substring.charAt(j) == someChar) {
 						count++;
 					}

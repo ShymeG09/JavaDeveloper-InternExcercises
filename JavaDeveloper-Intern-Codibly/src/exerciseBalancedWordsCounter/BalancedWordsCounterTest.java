@@ -13,6 +13,13 @@ public class BalancedWordsCounterTest {
 		
 		// 2. testInput2 = “” result = 0
 		System.out.println("input=\"\"  result=" + new BalancedWordsCounter().count(""));
+		
+		// 3. testInput3 = “abababa1” result = RuntimeException
+		try {
+			System.out.println("input=abababa1  result=" + new BalancedWordsCounter().count("abababa1"));
+		} catch (Exception e) {
+			System.out.println("input=abababa1  result=" + e.getMessage());
+		}
 	}
 
 }
