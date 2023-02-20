@@ -24,7 +24,7 @@ E.g. the words: “mama”, “ear”, “aabbcbcccbaa” are balanced,
 but the words “dad”, “elephant”, “abcba” are not. 
 Additionally, the balanced word is not empty.
 
-## What skill was tested?
+## What skills were tested?
 Mainly Java skills was proven in these apps. Additionally the 'BubbleSort' app was tested in JUnit but the 'BalancedWordCounter' app was tested via normal-driver class.
 
 ## Contact
